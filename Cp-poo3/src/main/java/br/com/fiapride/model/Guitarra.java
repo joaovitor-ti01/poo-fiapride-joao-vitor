@@ -1,11 +1,8 @@
 package br.com.fiapride.model;
 
-public class Guitarra {
+public class Guitarra extends Instrumento{
 
     private String modelo;
-    private String marca;
-    private int quantidadeCordas;
-    private String cor;
     private String afinacao;
     private double calibreCorda;
     private Amplificador amplificador;
@@ -22,14 +19,13 @@ public class Guitarra {
     );
 }
     
-    public Guitarra(String modelo, String marca, int quantidadeCordas, String cor, String afinacao, double calibreCorda) {
+   public Guitarra(String modelo, String marca, int quantidadeCordas, String cor, String afinacao, double calibreCorda) {
+        super(marca, cor, quantidadeCordas);
         this.modelo = modelo;
-        this.marca = marca;
-        this.quantidadeCordas = quantidadeCordas;
-        this.cor = cor;
         this.afinacao = afinacao;
         this.calibreCorda = calibreCorda;
     }
+
       
     
     public void exibir() {
