@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class Violao extends Instrumento {
+public class Violao extends Instrumento implements Afinavel {
 
     private String tipoMadeira;
     private String tipoCorda;
@@ -12,7 +12,12 @@ public class Violao extends Instrumento {
         this.tipoCorda = tipoCorda;
         this.tipoMadeira = tipoMadeira;
     }
-    
+ 
+    @Override
+    public void afinar() {
+
+        System.out.println("Violão afinado.");
+    }
     @Override
     public void exibirInformacoes() {
 

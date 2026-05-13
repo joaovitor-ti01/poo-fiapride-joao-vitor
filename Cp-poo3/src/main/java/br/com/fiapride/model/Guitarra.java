@@ -1,33 +1,45 @@
 package br.com.fiapride.model;
 
-public class Guitarra extends Instrumento{
+public class Guitarra extends Instrumento implements Afinavel {
 
     private String modelo;
     private String afinacao;
     private double calibreCorda;
     private Amplificador amplificador;
-    
+
     public Guitarra() {
 
-    this("","",6,"","Standard E",0.10);
-}
-    
-   public Guitarra(String modelo, String marca, int quantidadeCordas, String cor, String afinacao, double calibreCorda) {
+        this("","",6,"","Standard E",0.10);
+    }
+
+    public Guitarra(String modelo, String marca, int quantidadeCordas,
+                     String cor, String afinacao, double calibreCorda) {
+
         super(marca, cor, quantidadeCordas);
+
         this.modelo = modelo;
         this.afinacao = afinacao;
         this.calibreCorda = calibreCorda;
     }
 
-      
-    
+    @Override
+    public void afinar() {
+
+        System.out.println("Guitarra afinada em " + afinacao);
+    }
+
     @Override
     public void exibirInformacoes() {
+
         super.mostrarBase();
-        
+
         System.out.println("Modelo: " + modelo);
         System.out.println("Afinação: " + afinacao);
         System.out.println("Calibre da Corda: " + calibreCorda);
+
+        if (amplificador != null) {
+            amplificador.exibir();
+        }
     }
 
     public String abaixarAfinacao(String novaAfinacao) {
@@ -48,54 +60,19 @@ public class Guitarra extends Instrumento{
     public void setAmplificador(Amplificador amplificador) {
         this.amplificador = amplificador;
     }
-    
-    
+
     public String getModelo() {
         return modelo;
     }
 
     public void setModelo(String modelo) {
+
         if (modelo.isEmpty()) {
             System.out.println("Modelo inválido.");
             return;
         }
+
         this.modelo = modelo;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-            if (marca.isEmpty()) {
-                System.out.println("Marca inválida.");
-            return;
-        }
-        this.marca = marca;
-    }
-
-    public int getQuantidadeCordas() {
-        return quantidadeCordas;
-    }
-
-    public void setQuantidadeCordas(int quantidadeCordas) {
-         if (quantidadeCordas <= 0) {
-            System.out.println("Quantidade de cordas inválida.");
-            return;
-        }
-        this.quantidadeCordas = quantidadeCordas;
-    }
-
-    public String getCor() {
-        return cor;
-    }
-
-    public void setCor(String cor) {
-         if (cor.isEmpty()) {
-            System.out.println("Cor inválida.");
-            return;
-        }
-        this.cor = cor;
     }
 
     public String getAfinacao() {
@@ -103,10 +80,12 @@ public class Guitarra extends Instrumento{
     }
 
     public void setAfinacao(String afinacao) {
-         if (afinacao.isEmpty()) {
+
+        if (afinacao.isEmpty()) {
             System.out.println("Afinação inválida.");
             return;
         }
+
         this.afinacao = afinacao;
     }
 
@@ -115,8 +94,12 @@ public class Guitarra extends Instrumento{
     }
 
     public void setCalibreCorda(double calibreCorda) {
+
+        if (calibreCorda <= 0) {
+            System.out.println("Calibre inválido.");
+            return;
+        }
+
         this.calibreCorda = calibreCorda;
     }
-    
-    
 }
