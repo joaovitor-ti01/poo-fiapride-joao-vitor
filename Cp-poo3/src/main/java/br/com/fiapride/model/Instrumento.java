@@ -14,7 +14,6 @@ public class Instrumento {
     }
     
     public void exibirInformacoes() {
-
         System.out.println("Marca: " + marca);
         System.out.println("Cor: " + cor);
         System.out.println("Quantidade de cordas: " + quantidadeCordas);

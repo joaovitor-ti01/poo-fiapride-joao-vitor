@@ -9,14 +9,7 @@ public class Guitarra extends Instrumento{
     
     public Guitarra() {
 
-    this(
-        "",
-        "",
-        6,
-        "",
-        "Standard E",
-        0.10
-    );
+    this("","",6,"","Standard E",0.10);
 }
     
    public Guitarra(String modelo, String marca, int quantidadeCordas, String cor, String afinacao, double calibreCorda) {
@@ -28,13 +21,12 @@ public class Guitarra extends Instrumento{
 
       
     
-    public void exibir() {
-
+    @Override
+    public void exibirInformacoes() {
+        super.exibirInformacoes();
+        
         System.out.println("Modelo: " + modelo);
-        System.out.println("Marca: " + marca);
-        System.out.println("Quantidade de Cordas: " + quantidadeCordas);
         System.out.println("Afinação: " + afinacao);
-        System.out.println("Cor: " + cor);
         System.out.println("Calibre da Corda: " + calibreCorda);
     }
 
