@@ -16,7 +16,7 @@ public class Violao extends Instrumento {
     @Override
     public void exibirInformacoes() {
 
-        super.exibirInformacoes();
+        super.mostrarBase();
         System.out.println("Tipo de corda: " + tipoCorda);
         System.out.println("Madeira: " + tipoMadeira);
     }

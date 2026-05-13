@@ -23,7 +23,7 @@ public class Guitarra extends Instrumento{
     
     @Override
     public void exibirInformacoes() {
-        super.exibirInformacoes();
+        super.mostrarBase();
         
         System.out.println("Modelo: " + modelo);
         System.out.println("Afinação: " + afinacao);

@@ -2,7 +2,7 @@
 package br.com.fiapride.model;
 
 
-public class Instrumento {
+public abstract class Instrumento {
     protected String marca;
     protected String cor;
     protected int quantidadeCordas;
@@ -12,10 +12,12 @@ public class Instrumento {
         this.cor = cor;
         this.quantidadeCordas = quantidadeCordas;
     }
-    
-    public void exibirInformacoes() {
+    public void mostrarBase() {
+
         System.out.println("Marca: " + marca);
         System.out.println("Cor: " + cor);
-        System.out.println("Quantidade de cordas: " + quantidadeCordas);
+        System.out.println("Quantidade de Cordas: " + quantidadeCordas);
     }
+    
+    public abstract void exibirInformacoes();
 }
