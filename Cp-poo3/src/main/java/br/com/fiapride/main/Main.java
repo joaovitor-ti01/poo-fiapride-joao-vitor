@@ -6,22 +6,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Guitarra guitarra1 = new Guitarra();
+Guitarra guitarra1 = new Guitarra();
         Guitarra guitarra2 = new Guitarra();
 
-        guitarra1.modelo = "Les Paul";
-        guitarra1.marca = "Gibson";
-        guitarra1.cor = "Wine Red";
-        guitarra1.quantidadeCordas = 6;
-        guitarra1.afinacao = "Drop D";
-        guitarra1.calibreCorda = 0.10;
+        guitarra1.setModelo("Les Paul");
+        guitarra1.setMarca("Gibson");
+        guitarra1.setCor("Wine Red");
+        guitarra1.setQuantidadeCordas(6);
+        guitarra1.setAfinacao("Drop D");
+        guitarra1.setCalibreCorda(0.10);
 
-        guitarra2.modelo = "Stratocaster";
-        guitarra2.marca = "Fender";
-        guitarra2.cor = "Azul";
-        guitarra2.quantidadeCordas = 6;
-        guitarra2.afinacao = "Standard E";
-        guitarra2.calibreCorda = 0.09;
+        guitarra2.setModelo("Stratocaster");
+        guitarra2.setMarca("Fender");
+        guitarra2.setCor("Azul");
+        guitarra2.setQuantidadeCordas(6);
+        guitarra2.setAfinacao("Standard E");
+        guitarra2.setCalibreCorda(0.09);
 
         guitarra1.exibir();
         guitarra2.exibir();
