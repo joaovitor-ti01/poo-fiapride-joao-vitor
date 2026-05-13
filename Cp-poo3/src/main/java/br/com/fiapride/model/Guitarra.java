@@ -8,7 +8,8 @@ public class Guitarra {
     private String cor;
     private String afinacao;
     private double calibreCorda;
-
+    private Amplificador amplificador;
+    
     public Guitarra() {
 
     this(
@@ -52,6 +53,15 @@ public class Guitarra {
         return "Afinação alterada para " + afinacao;
     }
 
+    public Amplificador getAmplificador() {
+        return amplificador;
+    }
+
+    public void setAmplificador(Amplificador amplificador) {
+        this.amplificador = amplificador;
+    }
+    
+    
     public String getModelo() {
         return modelo;
     }
