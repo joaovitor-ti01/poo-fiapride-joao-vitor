@@ -8,6 +8,28 @@ public class Guitarra {
     private String cor;
     private String afinacao;
     private double calibreCorda;
+
+    public Guitarra() {
+
+    this(
+        "",
+        "",
+        6,
+        "",
+        "Standard E",
+        0.10
+    );
+}
+    
+    public Guitarra(String modelo, String marca, int quantidadeCordas, String cor, String afinacao, double calibreCorda) {
+        this.modelo = modelo;
+        this.marca = marca;
+        this.quantidadeCordas = quantidadeCordas;
+        this.cor = cor;
+        this.afinacao = afinacao;
+        this.calibreCorda = calibreCorda;
+    }
+      
     
     public void exibir() {
 
