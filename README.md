@@ -10,21 +10,6 @@
 
 ---
 
-## Arquitetura do Projeto (UML)
-
-### 1. Herança e Abstração
-Demonstra a especialização dos instrumentos.
-![Herança](img/heranca.png)
-
-### 2. Interface de Afinagem
-Demonstra a implementação do contrato de afinagem.
-![Interface](img/interface.png)
-
-### 3. Associação
-Demonstra a conexão entre a Guitarra e o seu Amplificador.
-![Associação](img/associacao.png)
-
----
 ## Descrição do Projeto
 
 Este projeto foi desenvolvido durante as aulas de Programação Orientada a Objetos, aplicando os conceitos das aulas 1-9 em um sistema de instrumentos musicais.
@@ -49,6 +34,21 @@ Além disso, foram implementadas algumas regras de negócio, como alteração de
 
 ---
 
+## Arquitetura do Projeto (UML)
+
+### 1. Herança e Abstração
+Demonstra a especialização dos instrumentos.
+![Herança](Cp-poo3/img/Heranca.png)
+
+### 2. Interface de Afinagem
+Demonstra a implementação do contrato de afinagem.
+![Interface](Cp-poo3/img/Interface.png)
+
+### 3. Associação
+Demonstra a conexão entre a Guitarra e o seu Amplificador.
+![Associação](Cp-poo3/img/Associacao.png)
+
+---
 # Perguntas de Reflexão
 
 ## Aula 1 - Classes e Objetos
